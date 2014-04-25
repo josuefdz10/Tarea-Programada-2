@@ -1,0 +1,14 @@
+wget http://www.swi-prolog.org/download/stable/src/pl-6.0.2.tar.gz
+tar xzvf pl-6.0.2.tar.gz
+cd pl-6.0.2/
+./configure --prefix=/usr --enable-shared
+make && sudo make install
+cd packages/clpqr/
+./configure --prefix=/usr
+make && sudo make install
+sudo ln -s  /usr/lib/swipl-6.0.2/lib/i686-linux/libswipl.so /usr/lib/libpl.so
+sudo ln -s  /usr/lib/swipl-6.0.2/lib/i686-linux/libswipl.so.6.0.2 /usr/lib/.
+wget http://pyswip.googlecode.com/files/pyswip-0.2.2.zip
+unzip pyswip-0.2.2.zip
+cd pyswip-0.2.2/
+sudo python setup.py install
