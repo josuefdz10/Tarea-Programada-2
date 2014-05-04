@@ -1,0 +1,35 @@
+Nuestro sistema trabaja con el framework Django 1.4.12 con una base de datos en MySQL. Como el Python 2.7 esta instalado en
+el Ubuntu, no se especifica su instalacion.
+--------Instalar Django----------
+-Descarga Django en https://www.djangoproject.com/download/1.4.12/tarball/ y extraer, se recomienda extraerlo en la carpeta
+personal (por lo general llamada Home).
+-En la Terminal ingresar 
+	cd Django-1.4.12 
+		esto en caso de que se instalo en la carpeta personal, sino fue así debera especificar la ruta del archivo.
+-Escribir en la terminal
+	sudo python setup.py install
+-Con eso tenemos el Django corriendo en nuestra máquina
+--------Instalando MySQL-------------------
+-En la terminal ingresar:
+	sudo apt-get install mysql-server mysql-client
+-Al finalizar te pedira uan contraseña para ingresar, para futuros casos la informacion es:
+	Usuario: root
+	Contraseña: manager
+-Con eso tenemos el MySQL instalado
+----------Instalar la libreria de MySQL para Python-------
+En la terminal escribir:
+	sudo apt-get install python-mysqldb
+Esto es para que el python reconozca el MySQL
+-------------Crear nuestra base de datos-----------------------------
+-Antes de iniciar necesitamos crear una base de datos, ingresar en consola
+	mysql -u root -p
+-Te pedirá una contraseña, ingresa:
+	manager
+-Crea la base de datos con:
+	create database demo;
+-No olvidar el ;('punto y coma')
+-Para verificar si la base se creó ingresa:
+	show databases;
+-Si en la lista dada se muestra 'demo' entonces si fue creada, salimos con Control+C.
+---------- Cambias la rutas estaticas---------------
+ Solo falta cambiar la rutas, ver en el archivo settings.py en la carpeta project/demo/demo.
